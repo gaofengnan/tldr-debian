@@ -68,10 +68,10 @@ build_architecture() {
     fi
 
     # One package for every suite: upstream ships one binary per architecture,
-    # so only the old ~<suite> version suffix ever differed. The fixed ~griffo
+    # so only the old ~<suite> version suffix ever differed. The fixed ~gaofn
     # keeps it below the distro's own build of the same version. Debian trixie
     # and later only: the mirror links it into those suites alone.
-    FULL_VERSION="$tldr_VERSION-${BUILD_VERSION}~griffo_${build_arch}"
+    FULL_VERSION="$tldr_VERSION-${BUILD_VERSION}~gaofn_${build_arch}"
     echo "  Building $FULL_VERSION"
 
     if ! docker build . -t "tldr-$build_arch" \
